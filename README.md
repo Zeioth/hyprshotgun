@@ -40,14 +40,14 @@ submap=mode_screenshot
 # -------------------------------------
 
 #BIND      MOD    KEY       DISPATCHER       VALUE
-bind =     ,      s,        exec,             hyprshotgun upload
-bind =     ,      r,        exec,             hyprshotgun region upload
-bind =     ,      w,        exec,             hyprshotgun window upload
-bind =     ,      d,        exec,             hyprshotgun alldisplays upload
-bind =     ,      a,        exec,             hyprshotgun
-bind =     ,      b,        exec,             hyprshotgun region
-bind =     ,      c,        exec,             hyprshotgun window 
-bind =     ,      e,        exec,             hyprshotgun alldisplays
+bind =     ,      s,        exec,            hyprshotgun upload
+bind =     ,      r,        exec,            hyprshotgun region upload
+bind =     ,      w,        exec,            hyprshotgun window upload
+bind =     ,      d,        exec,            hyprshotgun alldisplays upload
+bind =     ,      a,        exec,            hyprshotgun
+bind =     ,      b,        exec,            hyprshotgun region
+bind =     ,      c,        exec,            hyprshotgun window 
+bind =     ,      e,        exec,            hyprshotgun alldisplays
 
 # Exit condition
 #BIND      MOD    KEY       DISPATCHER       VALUE

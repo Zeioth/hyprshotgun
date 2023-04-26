@@ -37,7 +37,7 @@ submap=mode_screenshot
 # -------------------------------------
 
 #BIND      MOD    KEY       DISPATCHER       VALUE
-bind =     ,      s,        exec,             hyprshot display upload
+bind =     ,      s,        exec,             hyprshot upload
 bind =     ,      r,        exec,             hyprshot region upload
 bind =     ,      w,        exec,             hyprshot window upload
 bind =     ,      d,        exec,             hyprshot alldisplays upload

@@ -29,8 +29,11 @@ hyprshot display upload
 
 Everything for my children
 ```
+# BIND    MOD            KEY       DISPATCHER       VALUE
 bind =    $mod SHIFT,    s,        submap,          mode_screenshot
+```
 
+```
 submap=mode_screenshot
 
 # MODE IMPLEMENTATION

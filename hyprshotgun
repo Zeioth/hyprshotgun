@@ -8,17 +8,17 @@ if [ -z $WAYLAND_DISPLAY ]; then
 fi
 
 ## Put the path to your own screenshot folder
-## to variable HYPRSHOT_SCREENSHOTS here: ~/.config/hyprshot.sh
-if [ -f ~/.config/hyprshot.sh ]; then
-	. ~/.config/hyprshot.conf
+## to variable HYPRSHOTGUN_SCREENSHOTS here: ~/.config/hyprshotgun.conf
+if [ -f ~/.config/hyprshotgun.sh ]; then
+	. ~/.config/hyprshotgun.conf
 fi
 
-if [ -z $HYPRSHOT_SCREENSHOTS ]; then
-	HYPRSHOT_SCREENSHOTS=$(xdg-user-dir PICTURES)
+if [ -z $HYPRSHOTGUN_SCREENSHOTS ]; then
+	HYPRSHOTGUN_SCREENSHOTS=$(xdg-user-dir PICTURES)
 fi
 
-SCREENSHOT_TIMESTAMP=$(date "+${HYPRSHOT_DATEFMT:-%F_%H-%M-%S_%N}")
-SCREENSHOT_FULLNAME="$HYPRSHOT_SCREENSHOTS"/screenshot_${SCREENSHOT_TIMESTAMP}.png
+SCREENSHOT_TIMESTAMP=$(date "+${HYPRSHOTGUN_DATEFMT:-%F_%H-%M-%S_%N}")
+SCREENSHOT_FULLNAME="$HYPRSHOTGUN_SCREENSHOTS"/screenshot_${SCREENSHOT_TIMESTAMP}.png
 
 readonly filter='
 # returns the focused node by recursively traversing the node tree
@@ -37,15 +37,15 @@ make_screenshot() {
       echo '* NORMAL USAGE:'
       echo '-----------------'
       echo '* Local screenshot:'
-      echo 'hyprshot [display|window|region|alldisplays]'
+      echo 'hyprshotgun [display|window|region|alldisplays]'
       echo '' 
       echo '* Online screenshot:'
-			echo 'Usage: hyprshot [display|window|region|alldisplays] upload'
+			echo 'Usage: hyprshotgun [display|window|region|alldisplays] upload'
       echo ''
       echo '* ADVANCED:'
       echo '-----------------'
       echo 'Changing screenshot directory:'
-			echo 'By default the screenshots are saved in XDG_PICTURES_DIR. You can choose a different directory by setting the env: HYPRSHOT_SCREENSHOTS="/my/screenshot/directory/" Alternatively, you can put it on .config/.hyprshot.conf'
+			echo 'By default the screenshots are saved in XDG_PICTURES_DIR. You can choose a different directory by setting the env: HYPRSHOTGUN_SCREENSHOTS="/my/screenshot/directory/" Alternatively, you can put it on .config/.hyprshotgun.conf'
 
 			return 0
 			;;
@@ -66,17 +66,17 @@ make_screenshot() {
 
 copy_to_clipboard() {
 	if type wl-copy >/dev/null  2>&1; then
-		if [ -z $HYPRSHOT_WL_COPY_FILE ]; then
+		if [ -z $HYPRSHOTGUN_WL_COPY_FILE ]; then
 			printf "%s" "$1" | wl-copy 
 		else
 			wl-copy < "$SCREENSHOT_FULLNAME"
 		fi
 	elif type xsel >/dev/null  2>&1; then
 		printf "%s" "$1" | xsel --clipboard
-		unset HYPRSHOT_WL_COPY_FILE
+		unset HYPRSHOTGUN_WL_COPY_FILE
 	elif type xclip &>/dev/null; then
 		printf "%s" "$1" | xclip -selection clipboard
-		unset HYPRSHOT_WL_COPY_FILE
+		unset HYPRSHOTGUN_WL_COPY_FILE
 	else
 		echo "$1"
 	fi
@@ -108,13 +108,13 @@ case "$2" in
 		if [ -z $SCREENSHOT_LOCATOR ]; then
 			copy_to_clipboard "$SCREENSHOT_FULLNAME"
 			show_message "$SCREENSHOT_FULLNAME" document-save "Screenshot path"
-			if [ ! -z $HYPRSHOT_WL_COPY_FILE ]; then
+			if [ ! -z $HYPRSHOTGUN_WL_COPY_FILE ]; then
 				show_message "Screenshot was copied to clipboard.\\nFeel free to paste it." "$SCREENSHOT_FULLNAME" "Screenshot image"
 			fi
 		else
 			copy_to_clipboard "$SCREENSHOT_LOCATOR"
 			show_message "$SCREENSHOT_LOCATOR" document-send "Screenshot URL"
-			if [ ! -z $HYPRSHOT_WL_COPY_FILE ]; then
+			if [ ! -z $HYPRSHOTGUN_WL_COPY_FILE ]; then
 				show_message "Screenshot was copied to clipboard.\\nFeel free to paste it." "$SCREENSHOT_FULLNAME" "Screenshot image"
 			fi
 		fi
@@ -122,7 +122,7 @@ case "$2" in
 	*)
 		copy_to_clipboard "$SCREENSHOT_FULLNAME"
 		show_message "$SCREENSHOT_FULLNAME" document-save "Screenshot path"
-		if [ ! -z $HYPRSHOT_WL_COPY_FILE ]; then
+		if [ ! -z $HYPRSHOTGUN_WL_COPY_FILE ]; then
 			show_message "Screenshot was copied to clipboard.\\nFeel free to paste it." "$SCREENSHOT_FULLNAME" "Screenshot image"
 		fi
 esac

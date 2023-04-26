@@ -59,7 +59,7 @@ make_screenshot() {
       grimblast copysave screen "$2"
       ;;
 		*)
-			grimblast save output "$2"
+			grimblast copysave output "$2"
       ;;
 	esac
 }

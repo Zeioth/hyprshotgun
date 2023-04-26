@@ -40,14 +40,14 @@ submap=mode_screenshot
 # -------------------------------------
 
 #BIND      MOD    KEY       DISPATCHER       VALUE
-bind =     ,      s,        exec,             hyprshot upload
-bind =     ,      r,        exec,             hyprshot region upload
-bind =     ,      w,        exec,             hyprshot window upload
-bind =     ,      d,        exec,             hyprshot alldisplays upload
-bind =     ,      a,        exec,             hyprshot
-bind =     ,      b,        exec,             hyprshot region
-bind =     ,      c,        exec,             hyprshot window 
-bind =     ,      e,        exec,             hyprshot alldisplays
+bind =     ,      s,        exec,             hyprshotgun upload
+bind =     ,      r,        exec,             hyprshotgun region upload
+bind =     ,      w,        exec,             hyprshotgun window upload
+bind =     ,      d,        exec,             hyprshotgun alldisplays upload
+bind =     ,      a,        exec,             hyprshotgun
+bind =     ,      b,        exec,             hyprshotgun region
+bind =     ,      c,        exec,             hyprshotgun window 
+bind =     ,      e,        exec,             hyprshotgun alldisplays
 
 # Exit condition
 #BIND      MOD    KEY       DISPATCHER       VALUE
@@ -57,3 +57,6 @@ bind =     ,      escape,   submap,          reset
 
 submap=reset
 ```
+
+## Why hyprshotgun
+Because it sounds rad

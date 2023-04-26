@@ -37,14 +37,14 @@ submap=mode_screenshot
 # -------------------------------------
 
 #BIND      MOD    KEY       DISPATCHER       VALUE
-bind =    ,      s,        exec,             hyprshot display upload
-bind =    ,      r,        exec,             hyprshot region upload
-bind =    ,      w,        exec,             hyprshot window upload
-bind =    ,      d,        exec,             hyprshot alldisplays upload
-bind =    ,      a,        exec,             hyprshot
-bind =    ,      b,        exec,             hyprshot region
-bind =    ,      c,        exec,             hyprshot window 
-bind =    ,      e,        exec,             hyprshot alldisplays
+bind =     ,      s,        exec,             hyprshot display upload
+bind =     ,      r,        exec,             hyprshot region upload
+bind =     ,      w,        exec,             hyprshot window upload
+bind =     ,      d,        exec,             hyprshot alldisplays upload
+bind =     ,      a,        exec,             hyprshot
+bind =     ,      b,        exec,             hyprshot region
+bind =     ,      c,        exec,             hyprshot window 
+bind =     ,      e,        exec,             hyprshot alldisplays
 
 # Exit condition
 #BIND      MOD    KEY       DISPATCHER       VALUE

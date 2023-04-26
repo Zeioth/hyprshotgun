@@ -50,13 +50,13 @@ make_screenshot() {
 			return 0
 			;;
 		region)
-      grimblast save area "$2"
+      grimblast copysave area "$2"
 			;;
 		window)
-      grimblast save active "$2"
+      grimblast copysave active "$2"
 			;;
 		alldisplays)
-      grimblast save screen "$2"
+      grimblast copysave screen "$2"
       ;;
 		*)
 			grimblast save output "$2"

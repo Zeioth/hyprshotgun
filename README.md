@@ -1,4 +1,4 @@
-# hyprshot
+# hyprshotgun
 Screenshots the way you like: Local, or online
 
 ## Dependencies

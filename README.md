@@ -59,4 +59,4 @@ submap=reset
 ```
 
 ## Why hyprshotgun
-Because it sounds rad
+Because it sounds rad as fuck.

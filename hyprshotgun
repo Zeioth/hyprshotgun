@@ -2,11 +2,22 @@
 # Screenshot helper for hyprland.
 # Copyright 2023, Adrian Lopez.
 
+# CONSTANTS
+# ======================================
+SCREENSHOT_TIMESTAMP=$(date "+${HYPRSHOTGUN_DATEFMT:-%F_%H-%M-%S_%N}")
+SCREENSHOT_FULLNAME="$HYPRSHOTGUN_SCREENSHOTS"/screenshot_${SCREENSHOT_TIMESTAMP}.png
+
+
+# CHECKS
+# ======================================
 if [ -z $WAYLAND_DISPLAY ]; then
-	(>&2 echo Wayland is not running)
-	exit 1
+  (>&2 echo Wayland is not running)
+  exit 1
 fi
 
+
+# CONFIGURATION
+# ======================================
 ## Put the path to your own screenshot folder
 ## to variable HYPRSHOTGUN_SCREENSHOTS here: ~/.config/hyprshotgun.conf
 if [ -f ~/.config/hyprshotgun.sh ]; then
@@ -17,9 +28,9 @@ if [ -z $HYPRSHOTGUN_SCREENSHOTS ]; then
 	HYPRSHOTGUN_SCREENSHOTS=$(xdg-user-dir PICTURES)
 fi
 
-SCREENSHOT_TIMESTAMP=$(date "+${HYPRSHOTGUN_DATEFMT:-%F_%H-%M-%S_%N}")
-SCREENSHOT_FULLNAME="$HYPRSHOTGUN_SCREENSHOTS"/screenshot_${SCREENSHOT_TIMESTAMP}.png
 
+# DEFINE HELPERS
+# ======================================
 readonly filter='
 # returns the focused node by recursively traversing the node tree
 def find_focused_node:
@@ -96,11 +107,19 @@ upload_screenshot() {
 	fi
 }
 
-make_screenshot "$1" "$SCREENSHOT_FULLNAME"
 
+# ENTRY POINT
+# ======================================
+make_screenshot "$1" "$SCREENSHOT_FULLNAME"
 if [ ! -f "$SCREENSHOT_FULLNAME" ]; then
 	exit;
 fi
+
+
+# UPLOAD (TODO: We shold make a method here and just call it in the entry poing)
+# ======================================
+# If the parameter "upload" is passed, 
+# upload to the cloud
 
 case "$2" in
 	upload)

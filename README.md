@@ -10,7 +10,7 @@ Arch linux users can
 For other distros you can clone this repository. In this case you need the next dependencies.
 
 ``` sh
-grim slurp grimblast
+grimblast
 ```
 
 ## How to use

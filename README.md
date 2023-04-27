@@ -28,7 +28,7 @@ You can upload the screenshot to an online service (https://0x0.st) by adding 'u
 hyprshotgun region upload
 ```
 
-# I want an hyprland submap/mode!
+## I want an hyprland submap/mode!
 
 Everything for my children
 ```

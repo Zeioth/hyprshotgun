@@ -25,7 +25,7 @@ You can upload the screenshot to an online service (https://0x0.st) by adding 'u
 
 ``` sh
 # The url will be copied to the clipboad!
-hyprshotgun display upload
+hyprshotgun region upload
 ```
 
 # I want an hyprland submap/mode!

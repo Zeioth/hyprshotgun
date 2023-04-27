@@ -19,7 +19,7 @@ Check hyprshotgun --help
 hyprshotgun display                    # Local screenshot of the active display.
 hyprshotgun region                     # Locan screenshot of a region selected by the user.
 hyprshotgun window                     # Locan screenshot of the active window
-hyprshotgun alldisplays upload         # Local screenshot of all displays currently enabled.
+hyprshotgun alldisplays                # Local screenshot of all displays currently enabled.
 ```
 You can upload the screenshot to an online service (https://0x0.st) by adding 'upload' at the end like in
 

@@ -10,10 +10,10 @@ Arch linux users can
 For other distros you can clone this repository. In this case you need the next dependencies.
 
 ``` sh
-grim slurp grimblast
+grimblast
 ```
 
-# How to use
+## How to use
 Check hyprshotgun --help
 ``` sh
 hyprshotgun                            # Local screenshot of the active display.
@@ -28,7 +28,7 @@ You can upload the screenshot to an online service (https://0x0.st) by adding 'u
 hyprshotgun region upload
 ```
 
-# I want an hyprland submap/mode!
+## I want an hyprland submap/mode!
 
 Everything for my children
 ```

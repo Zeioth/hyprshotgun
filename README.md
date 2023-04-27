@@ -7,7 +7,7 @@ Arch linux users can
 
     yay -S hyprshotgun
 
-For other distros you can clone this repository. You will need the next dependencies.
+For other distros you can clone this repository. In this case you need the next dependencies.
 
 ``` sh
 grim slurp grimblast

@@ -7,12 +7,10 @@ Arch linux users can
 
     yay -S hyprshotgun
 
+If you are not on arch linux. You can clone this repository. You will need the next dependencies.
+
 ``` sh
-# If you are not on arch linux. You can clone this repository.
-# You will need the next dependencies.
-grim
-slurp
-grimblast
+grim slurp grimblast
 ```
 
 # How to use

@@ -141,8 +141,6 @@ show_notification(){
 }
 
 
-
-
 # ENTRY POINT OF THE PROGRAM
 # ======================================
 take_screenshot "$1" "$SCREENSHOT_FULLNAME"

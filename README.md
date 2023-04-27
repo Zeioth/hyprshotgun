@@ -3,7 +3,9 @@ Screenshots the way you like: Local, or online
 
 ## How to install
 
-yay -S hyprshotgun
+Arch linux users can
+
+    yay -S hyprshotgun
 
 ``` sh
 # If you are not on arch linux. You can clone this repository.

@@ -16,7 +16,7 @@ grim slurp grimblast
 # How to use
 Check hyprland --help
 ``` sh
-hyprshotgun display                    # Local screenshot of the active display.
+hyprshotgun                            # Local screenshot of the active display.
 hyprshotgun region                     # Locan screenshot of a region selected by the user.
 hyprshotgun window                     # Locan screenshot of the active window
 hyprshotgun alldisplays upload         # Local screenshot of all displays currently enabled.

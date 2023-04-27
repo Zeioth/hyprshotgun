@@ -13,7 +13,7 @@ For other distros you can clone this repository. In this case you need the next 
 grim slurp grimblast
 ```
 
-# How to use
+## How to use
 Check hyprland --help
 ``` sh
 hyprshotgun                            # Local screenshot of the active display.

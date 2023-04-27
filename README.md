@@ -16,7 +16,7 @@ grimblast
 ## How to use
 Check hyprshotgun --help
 ``` sh
-hyprshotgun dirplay                    # Local screenshot of the active display.
+hyprshotgun display                    # Local screenshot of the active display.
 hyprshotgun region                     # Locan screenshot of a region selected by the user.
 hyprshotgun window                     # Locan screenshot of the active window
 hyprshotgun alldisplays upload         # Local screenshot of all displays currently enabled.

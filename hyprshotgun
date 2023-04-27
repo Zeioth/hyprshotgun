@@ -76,7 +76,6 @@ take_screenshot() {
       display_help
       return 0
       ;;
-
 	esac
 }
 

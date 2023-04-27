@@ -128,17 +128,19 @@ show_notification(){
     upload)
       if [ -z $SCREENSHOT_LOCATOR ]; then
         copy_to_clipboard "$SCREENSHOT_FULLNAME"
-        send_notification "$SCREENSHOT_FULLNAME" document-save "Online screenshots are not available at the moment. Local path copied to the clipboard instead:"
+        send_notification "$SCREENSHOT_FULLNAME" document-save "📋 Online screenshots are not available at the moment. Image path copied:"
       else
         copy_to_clipboard "$SCREENSHOT_LOCATOR"
-        send_notification "$SCREENSHOT_LOCATOR" document-send "URL copied to the clipboard:"
+        send_notification "$SCREENSHOT_LOCATOR" document-send "📋 Image URL copied:"
       fi
       ;;
     *)
       copy_to_clipboard "$SCREENSHOT_FULLNAME"
-      send_notification "$SCREENSHOT_FULLNAME" document-save "Path copied to the clipboard:"
+      send_notification "$SCREENSHOT_FULLNAME" document-save "📋 Image path copied:"
   esac
 }
+
+
 
 
 # ENTRY POINT OF THE PROGRAM

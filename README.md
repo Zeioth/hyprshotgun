@@ -1,10 +1,13 @@
 # hyprshotgun
 Screenshots the way you like: Local, or online
 
-## Dependencies
-You need to have installed the next packages
+## How to install
+
+yay -S hyprshotgun
 
 ``` sh
+# If you are not on arch linux. You can clone this repository.
+# You will need the next dependencies.
 grim
 slurp
 grimblast

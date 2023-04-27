@@ -115,7 +115,10 @@ copy_to_clipboard() {
 # Wrapper method for notify-send
 send_notification() {
 	if type notify-send >/dev/null  2>&1; then
-		notify-send --expire-time=3000 --category=screenshot --icon="$2" "$3" "$1"
+		notify-send -h string:x-canonical-private-synchronous:shot-notify -u normal -i "$SCREENSHOT_FULLNAME" "$3" "$1"
+		# -hint=TYPE:NAME:VALUE        Specifies basic extra data to pass.
+		# -h basically adds a custom header to the notification that identifies it as a screenshot notification. 
+
 	fi
 }
 

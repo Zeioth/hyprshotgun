@@ -58,6 +58,9 @@ take_screenshot() {
       display_help
 			return 0
 			;;
+		display)
+			grimblast save output "$2"
+      ;;
 		region)
       grimblast save area "$2"
 			;;
@@ -66,9 +69,6 @@ take_screenshot() {
 			;;
 		alldisplays)
       grimblast save screen "$2"
-      ;;
-		display)
-			grimblast save output "$2"
       ;;
 		*)
       echo "Invalid argument:"
